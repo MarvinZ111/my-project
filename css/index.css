@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    color: #333;
+}
+a {
+    text-decoration: none;
+    color: #0ea5e9;
+}
+.iconfont,
+.label {
+    color: #888;
+    text-align: right;
+}
+.gray {
+    color: gray;
+}
+.container {
+    width: 800px;
+    flex-direction: column;
+    padding: 50px;
+    box-shadow: 0 0 20px #ccc;
+    border-radius: 20px;
+    margin: 50px auto;
+    position: relative;
+    background-color: #fff;
+}
+.container::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #22d3ee, #0ea5e9);
+    z-index: -1;
+    border-radius: 20px;
+    left: -25px;
+    top: 0;
+    transform: rotate(-3deg);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.info-container {
+    display: flex;
+}
+.info-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.info {
+    flex: 1 0;
+    display: grid;
+    grid-template-columns: 16px 280px 60px 1fr;
+    column-gap: 10px;
+    align-items: center;
+}
+.name {
+    grid-area: 1/1/2/5;
+    font-size: 0;
+}
+.name h2 {
+    font-weight: bold;
+    font-size: 30px;
+    display: inline-block;
+    letter-spacing: 3px;
+    margin-right: 10px;
+}
+.name span {
+    font-size: 14px;
+    letter-spacing: 5px;
+}
+.album {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(5, 135px);
+    grid-template-rows: repeat(2, 180px);
+    gap: 10px 5px;
+}
+.album li {
+    object-fit: cover;
+}
+.album li div {
+    text-align: center;
+}
+.album li a {
+    display: block;
+}
+.album li span.gray {
+    font-size: 12px;
+}
+.album li img {
+    width: 100%;
+    height: 135px;
+}
+.block {
+    margin: 50px 0;
+}
+.block h2 {
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-right: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+.direction {
+    padding: 20px 0;
+}
+.line {
+    position: relative;
+}
+.line::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background-color: #22d3ee;
+    left: 0;
+    top: 10px;
+}
+.content {
+    text-indent: 2em;
+    padding-left: 20px;
+    position: relative;
+    margin: 20px 0;
+}
+.content::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background-color: #0ea5e9;
+    left: -7px;
+    top: 4px;
+    border-radius: 50%;
+}
+.person img {
+    width: 100%;
+}
